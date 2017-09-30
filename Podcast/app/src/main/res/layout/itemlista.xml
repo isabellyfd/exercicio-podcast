@@ -1,32 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" >
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+    android:layout_height="80dp"
+    >
 
-        <TextView
+    <TextView
+            android:text="heuehuehueheuheuheuehueheuehueheuheu uasdh udashduashdusadhuashdaushdusahdausd udhasudhasudhasudhasuhdasudh usahduashduashduashd udhasduahs "
+            android:ellipsize="end"
             android:id="@+id/item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="8"
-            android:textSize="18sp" />
-        <Button
-            android:id="@+id/item_action"
+            android:maxLines="2"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/item_action"
+            android:layout_marginRight="10dp"
+            android:textSize="22sp"
+            android:textColor="@color/colorClouds"
+            android:layout_marginLeft="10dp"
+        />
+    <TextView
+            android:text="asdjasidjiasdjisajisjdiasjdsaijds"
+            android:id="@+id/item_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="@string/action_download" />
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/item_action"
+            android:layout_below="@+id/item_title"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorClouds"
+            android:layout_marginLeft="10dp"
+        />
 
-    </LinearLayout>
 
-    <TextView
-        android:id="@+id/item_date"
+    <Button
+        android:id="@+id/item_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp" />
-
-</LinearLayout>
+        android:text="@string/action_download"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/colorClouds"
+        android:background="@color/colorSilver"
+        />
+</RelativeLayout>
