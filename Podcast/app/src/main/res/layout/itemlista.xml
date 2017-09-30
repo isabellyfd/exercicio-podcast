@@ -45,5 +45,8 @@
         android:layout_marginRight="10dp"
         android:textColor="@color/colorClouds"
         android:background="@color/colorSilver"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         />
 </RelativeLayout>
