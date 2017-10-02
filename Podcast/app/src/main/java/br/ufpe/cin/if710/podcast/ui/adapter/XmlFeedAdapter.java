@@ -5,18 +5,25 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import br.ufpe.cin.if710.podcast.R;
 import br.ufpe.cin.if710.podcast.domain.ItemFeed;
 
-public class XmlFeedAdapter extends ArrayAdapter<ItemFeed> {
+public class XmlFeedAdapter extends ArrayAdapter<ItemFeed> implements View.OnClickListener {
 
     int linkResource;
 
     public XmlFeedAdapter(Context context, int resource, List<ItemFeed> objects) {
         super(context, resource, objects);
         linkResource = resource;
+    }
+
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(getContext(), "clicou", Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -49,6 +56,8 @@ public class XmlFeedAdapter extends ArrayAdapter<ItemFeed> {
     static class ViewHolder {
         TextView item_title;
         TextView item_date;
+        Button item_button;
+        int position;
     }
 
     @Override
@@ -59,12 +68,18 @@ public class XmlFeedAdapter extends ArrayAdapter<ItemFeed> {
             holder = new ViewHolder();
             holder.item_title = (TextView) convertView.findViewById(R.id.item_title);
             holder.item_date = (TextView) convertView.findViewById(R.id.item_date);
+            holder.item_button = (Button) convertView.findViewById(R.id.item_action);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.item_title.setText(getItem(position).getTitle());
         holder.item_date.setText(getItem(position).getPubDate());
+
+
+        holder.item_button.setOnClickListener(this);
+        holder.position = position;
+
         return convertView;
     }
 }
