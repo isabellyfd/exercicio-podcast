@@ -43,7 +43,18 @@ public class MainActivity extends Activity {
 
         items = (ListView) findViewById(R.id.items);
 
+        items.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                XmlFeedAdapter adapter = (XmlFeedAdapter) parent.getAdapter();
+                ItemFeed item = adapter.getItem(position);
 
+                Intent intent = new Intent(getApplicationContext(), EpisodeDetailActivity.class);
+                intent.putExtra("item", item);
+                startActivity(intent);
+                //Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -110,15 +121,7 @@ public class MainActivity extends Activity {
             items.setAdapter(adapter);
             items.setTextFilterEnabled(true);
 
-            items.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    XmlFeedAdapter adapter = (XmlFeedAdapter) parent.getAdapter();
-                    ItemFeed item = adapter.getItem(position);
-                    String msg = item.getTitle() + " " + item.getDownloadLink();
-                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
-                }
-            });
+
 
 
         }
