@@ -1,9 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="br.ufpe.cin.if710.podcast.ui.EpisodeDetailActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/details_static_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_title"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:textSize="22sp"
+        android:textColor="@color/midnightBlue"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="jsandijnsadjiasndijasndjiasndijasndaijsndiasjndiasjndajisdnaisjdnasjidnasjidnas"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/details_static_tittle"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        />
+
+    <TextView
+        android:id="@+id/details_static_pubdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_pubdate"
+        android:textSize="22sp"
+        android:textColor="@color/midnightBlue"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/details_title"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/details_pubdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sidasidasidjasidjasijdiasjdisajdiasjdijas"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/details_static_pubdate"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/details_static_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_description"
+        android:textSize="22sp"
+        android:textColor="@color/midnightBlue"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/details_pubdate"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/details_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sidasidasidjasidjasijdiasjdisajdiasjdijas"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/details_static_description"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/details_static_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_link"
+        android:textSize="22sp"
+        android:textColor="@color/midnightBlue"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/details_description"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/details_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sidasidasidjasidjasijdiasjdisajdiasjdijas"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/details_static_link"
+        android:layout_marginTop="10dp"
+        />
+
+</RelativeLayout>
